@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %}  
+Enrollment
+{% endblock %}
+
+{% block content %}
+<body class="text-center">
+    <div class="container">
+        <br>
+        <form method="POST" class="form-register" style="color:white">
+            {{ form.hidden_tag() }}
+            <h1 class="h3 mb-3 font-weight-normal">Enrollment Form</h1>
+            {{ form.username.label() }}
+            {{ form.username(class = "form-control", placeholder = "User Name") }}
+
+            {{ form.email.label() }}
+            {{ form.email(class = "form-control", placeholder = "Email Address") }}
+
+            {{ form.password_1.label() }}
+            {{ form.password_1(class = "form-control", placeholder = "Password") }}
+
+            {{ form.password_2.label() }}
+            {{ form.password_2(class = "form-control", placeholder = "Re-type Password") }}
+
+            {{ form.age.label() }}
+            {{ form.age(class = "form-control", placeholder = "Age") }}
+
+            {{ form.month.label() }}
+            {{ form.month(class = "form-control", placeholder = "Month To Enroll From") }}
+            <h7> Batch Timings </h7>
+            <br>
+            {{ form.batch_timing(class = "form-control", placeholder = "Timings")}}
+            <br>
+            {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+        </form>
+    </div>
+</body>
+{% endblock %}
